@@ -43,6 +43,7 @@ function dismiss() {
     $("#html_editor").val("")
     $("#url").val("")
     $("#redirect_url_input").val("")
+    $("#second_step_html_editor").val("")
     $("#modal").find("input[type='checkbox']").prop("checked", false)
     $("#capture_passwords").hide()
     $("#redirect_url").hide()
@@ -138,6 +139,7 @@ function copy(idx) {
     $("#name").val("Copy of " + page.name)
     $("#html_editor").val(page.html)
 }
+
 
 function load() {
     /*

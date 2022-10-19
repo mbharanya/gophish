@@ -83,6 +83,29 @@
                         <input id="redirect_url_input" class="form-control" placeholder="http://example.com" />
                     </div>
                 </div>
+                <div id="second_step">
+                    <label class="control-label" for="redirect_url_input">HTML in a second step
+                    <textarea id="second_step_html_editor"></textarea>
+                    </label>
+                    <span class="btn btn-danger btn-file"><i class="fa fa-plus"></i> Add Files
+                        <input id="attachmentUpload" type="file" onchange="attach(this.files)" multiple>
+                    </span>
+                    <br />
+                    <br />
+                    <table id="attachmentsTable" class="table">
+                        <thead>
+                            <tr>
+                                <th class="col-md-1 no-sort"></th>
+                                <th class="col-md-10">Name</th>
+                                <th class="col-md-1 no-sort"></th>
+                                <th class="datatable_hidden no-sort">Content</th>
+                                <th class="datatable_hidden no-sort">Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <div class="modal-footer">
                 <button type="button" data-dismiss="modal" class="btn btn-default" onclick="dismiss()">Cancel</button>
@@ -120,4 +143,5 @@
 <script src="/js/src/vendor/ckeditor/adapters/jquery.js"></script>
 <script src="/js/dist/app/autocomplete.min.js"></script>
 <script src="/js/dist/app/landing_pages.min.js"></script>
+<script src="/js/dist/app/file_upload.min.js"></script>
 {{end}}

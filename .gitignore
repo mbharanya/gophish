@@ -3,6 +3,9 @@
 *.a
 *.so
 
+# Minified javascript files
+static/js/dist/**/*.min.js
+
 # Folders
 _obj
 _test

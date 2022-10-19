@@ -19,6 +19,7 @@ type Page struct {
 	CapturePasswords   bool      `json:"capture_passwords" gorm:"column:capture_passwords"`
 	RedirectURL        string    `json:"redirect_url" gorm:"column:redirect_url"`
 	ModifiedDate       time.Time `json:"modified_date"`
+	SecondStepHTML     string    `json:"second_step_html" gorm:"column:second_step_html"`
 }
 
 // ErrPageNameNotSpecified is thrown if the name of the landing page is blank.

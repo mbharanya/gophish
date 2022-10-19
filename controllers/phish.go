@@ -281,6 +281,14 @@ func renderPhishResponse(w http.ResponseWriter, r *http.Request, ptx models.Phis
 			}
 			http.Redirect(w, r, redirectURL, http.StatusFound)
 			return
+		} else if p.SecondStepHTML != "" {
+			html, err := models.ExecuteTemplate(p.SecondStepHTML, ptx)
+			if err != nil {
+				log.Error(err)
+				http.NotFound(w, r)
+				return
+			}
+			w.Write([]byte(html))
 		}
 	}
 	// Otherwise, we just need to write out the templated HTML
